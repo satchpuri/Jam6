@@ -21,21 +21,21 @@ public class sushicollect : MonoBehaviour {
 	void Update () {
 
 		//try to grab a sushi roll
-		if (Input.GetAxis("Jump") > 0) 
+		if (Input.GetAxis("Jump") > 0 && playercontrol.clickTimer > playercontrol.timeTillReclick) 
 		{
-			print ("Clicking!");
 			//within range of the sushi roll
 			if (player.transform.position.x + distanceOffset > transform.position.x && player.transform.position.x - distanceOffset < transform.position.x) 
 			{
 				//check if the player can hold more sushi
-				if (plyctrl.GetHolding() < plyctrl.GetMaxHold()) 
+				if (plyctrl.GetHolding () < plyctrl.GetMaxHold ()) 
 				{
-					plyctrl.SetHolding(plyctrl.GetHolding () + 1);
-					print ("Deleted!");
+					plyctrl.SetHolding (plyctrl.GetHolding () + 1);
+					playercontrol.clickTimer = 0;
 					Destroy(gameObject);
 				}
 			}
 		}
+
 
 	}
 }

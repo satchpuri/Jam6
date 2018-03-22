@@ -8,7 +8,10 @@ public class playercontrol : MonoBehaviour {
 	[SerializeField] private float speed;
 	[SerializeField] private float limitRight;
 	[SerializeField] private float limitLeft;
-	[SerializeField] private int score;
+	public static int score;
+
+	public static int clickTimer = 0;
+	public static int timeTillReclick = 20;
 
 	//how many nsushi rolls the player is holding
 	public int holding;
@@ -24,7 +27,7 @@ public class playercontrol : MonoBehaviour {
 		holding = 0;
 		maxHold = 2;
 
-		speed = 10.0f;
+		speed = 7.0f;
 		limitRight = 10.0f;
 		limitLeft = -12.75f;
 		score = 0;
@@ -45,6 +48,8 @@ public class playercontrol : MonoBehaviour {
 		{
 			transform.position += new Vector3(-speed, 0.0f, 0.0f) * Time.deltaTime;
 		}
+
+		clickTimer++;
 	}
 
 	public int GetHolding()
