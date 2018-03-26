@@ -27,7 +27,7 @@ public class playercontrol : MonoBehaviour {
 		holding = 0;
 		maxHold = 2;
 
-		speed = 7.0f;
+		speed = 15.0f;
 		limitRight = 10.0f;
 		limitLeft = -12.75f;
 		score = 0;
