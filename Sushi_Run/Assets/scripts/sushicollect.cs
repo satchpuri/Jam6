@@ -36,6 +36,8 @@ public class sushicollect : MonoBehaviour {
 			}
 		}
 
+        transform.position += new Vector3(GameManagerSpawn.speed * Time.deltaTime, 0.0f, 0.0f);
+
 
 	}
 }
