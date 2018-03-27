@@ -27,12 +27,12 @@ public class machinecollectsushi : MonoBehaviour {
 			canGiveSushi = false;
 		}
 
-		if (canGiveSushi && Input.GetAxis("Jump") > 0) 
+		if (canGiveSushi && Input.GetAxis("Jump") != 0) 
 		{
 			playercontrol.score += plyctrl.GetHolding();
 			plyctrl.SetHolding(0);
 		}
 
-		print(canGiveSushi);
+		print(Input.GetAxis("Jump") > 0);
 	}
 }

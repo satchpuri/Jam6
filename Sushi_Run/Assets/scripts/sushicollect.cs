@@ -23,6 +23,7 @@ public class sushicollect : MonoBehaviour {
 		//try to grab a sushi roll
 		if (Input.GetAxis("Jump") != 0 && playercontrol.clickTimer > playercontrol.timeTillReclick) 
 		{
+			print ("Picking up.");
 			//within range of the sushi roll
 			if (player.transform.position.x + distanceOffset > transform.position.x && player.transform.position.x - distanceOffset < transform.position.x) 
 			{
