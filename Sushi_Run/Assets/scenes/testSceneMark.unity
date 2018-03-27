@@ -909,11 +909,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491997149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fce4de0c2684004ea24bc62244198c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dd15c27e4122cc4eaabfe50ca68e58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingPoint: {fileID: 50300815}
-  EndingPoint: {fileID: 988342839}
+  waves: []
+  timeBetweenWaves: 3
+  waveCountdown: 0
 --- !u!4 &1491997151
 Transform:
   m_ObjectHideFlags: 0
